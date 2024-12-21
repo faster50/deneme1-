@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PalindormChecker</title>
+</head>
+<body>
+    <h1>Palindome Checker</h1>
+    <input id="input" type="text" placeholder="type something">
+    <button onclick="check()">Check</button>
+    <script>
+        const input = document.getElementById("input");
+        function check(){
+            const value = input.value;
+            const reverse = reverseString(value);
+            
+            if (value == reverse){
+                alert("god damn it its fucking working")
+            } 
+            else{
+                alert("Not Today!")
+            }
+            input.value = ""
+            
+        }
+        function reverseString(str){
+            return str.split("").reverse().join("")
+
+        }
+    </script>
+</body>
+</html>
